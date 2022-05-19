@@ -46,7 +46,10 @@ const Home = () => {
 										<td>{email}</td>
 										<td>{number}</td>
 										<td>
-											<Link to="/" className="btn btn-outline-primary btn-sm">
+											<Link
+												to={`/edit/${id}`}
+												className="btn btn-outline-primary btn-sm"
+											>
 												Edit
 											</Link>
 											<button

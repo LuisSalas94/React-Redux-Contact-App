@@ -1,5 +1,5 @@
 //actions
-import { ADD_CONTACT, DELETE_CONTACT } from "./contactActions";
+import { ADD_CONTACT, DELETE_CONTACT, UPDATE_CONTACT } from "./contactActions";
 
 const initialState = [
 	{
@@ -32,6 +32,13 @@ const contactReducer = (state = initialState, action) => {
 				(contact) => contact.id !== action.payload
 			);
 			state = deletedContact;
+			return state;
+
+		case UPDATE_CONTACT:
+			const updatedContact = state.map((contact) =>
+				contact.id === action.payload.id ? action.payload : contact
+			);
+			state = updatedContact;
 			return state;
 
 		default:
