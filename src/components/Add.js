@@ -39,7 +39,7 @@ const Add = () => {
 
 	return (
 		<div className="container">
-			<h1 className="display-3 my-5 text-center">Add Student</h1>
+			<h1 className="display-3 my-5 text-center">Add Contact</h1>
 			<div className="row">
 				<div className="col-md-6 shadow mx-auto p-5">
 					<form onSubmit={handleSubmit}>
